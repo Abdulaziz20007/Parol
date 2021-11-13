@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Parol generatori</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" href="fav.png" type="image/x-icon"/>
+  <title>Parol generatori</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="fav.png" type="image/x-icon"/>
     <link rel="shortcut icon" href="fav.png" type="image/x-icon"/>
 </head>
 
@@ -36,51 +36,52 @@
 }
 .divbir li a
 {
-	color: #735245;
-	font-size: 24px;
-	font-weight: bold;
+  color: #735245;
+  font-size: 24px;
+  font-weight: bold;
 }
 .divbir li a:hover
 {
-	color: white;
+  color: white;
 }
 </style>
-	<div class="inputbox">
-		<h2>Parol generatori</h2>
-		<input type="text" name="" placeholder="Parol" id="password" readonly="">
-		<img height="30px" width="30px" src="copy.png" class="copy" onmouseout="outFunc()" onclick="copyPassword();">
-		<div id="btn" onclick="getPassword()">Parolni olish</div>
-	</div>
-	<div class="alertBox"></div>
-	<script type="text/javascript">
-		function getPassword(){
+  <div class="inputbox">
+    <h2>Parol generatori</h2>
+    <input type="text" name="" placeholder="Parol" id="password" readonly="">
+    <img height="30px" width="30px" src="copy.png" class="copy" onmouseout="outFunc()" onclick="copyPassword();">
+    <div id="btn" onclick="getPassword()">Parolni olish</div>
+  </div>
+  <div class="alertBox"></div>
+  <script type="text/javascript">
+    function getPassword(){
 
-			var chars = "123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-			var passwordLength = 10;
-			var password = "";
+      var chars = "123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      var passwordLength = 10;
+      var password = "";
 
-			for (var i=0; i<passwordLength; i++){
-				var randomNumber = Math.floor(Math.random() * chars.length);
-				password += chars.substring(randomNumber,randomNumber+1);
-			}
-			document.getElementById("password").value = password
-		}
+      for (var i=0; i<passwordLength; i++){
+        var randomNumber = Math.floor(Math.random() * chars.length);
+        password += chars.substring(randomNumber,randomNumber+1);
+      }
+      document.getElementById("password").value = password
+    }
 
-	</script>
+  </script>
 
     <script type="text/javascript">
-    	var	alertBox = document.querySelect('.alertBox')
+      var alertBox = document.querySelect('.alertBox')
 
 
-    	function copyPassword(){
-    		alert("Parol vaqtinchalik xotiraga saqlandi!")
-    		var copyPassText = document.getElementById("password")
-    		copyPassText.select();
-    		copyPassText.setSelectionRange(0,9999);
-    		document.execCommand("copy");
-    		alertBox.classList.toggle('active');
-    	}
+      function copyPassword(){
+        alert("Parol vaqtinchalik xotiraga saqlandi!")
+        var copyPassText = document.getElementById("password")
+        copyPassText.select();
+        copyPassText.setSelectionRange(0,9999);
+        document.execCommand("copy");
+        alertBox.classList.toggle('active');
+      }
     </script>
 
 </body>
 </html>
+<span style="font-family:marck script,cursive;">Abdulaziz developer</span>
